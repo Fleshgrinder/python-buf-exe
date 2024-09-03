@@ -49,7 +49,7 @@ jobs:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: wheels
     - uses: actions/setup-python@v4
@@ -65,7 +65,7 @@ jobs:
     env:
       PLATFORM: ${{ matrix.platform }}
     steps:
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: wheels
     - uses: docker/setup-qemu-action@v2
